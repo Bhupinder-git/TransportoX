@@ -14,6 +14,7 @@ import "./role-layout.css";
 import "./scoped-fleet.css";
 import "./polish.css";
 import "./driver-logout.css";
+import "./notification-icon.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

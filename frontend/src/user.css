@@ -41,6 +41,10 @@
     margin-bottom: 22px
 }
 
+.login-card .role-tabs {
+    grid-template-columns: repeat(2, 1fr)
+}
+
 .role-tabs button {
     border: 0;
     background: #f6f4ea;
@@ -91,6 +95,24 @@
 .login-button {
     width: 100%;
     margin-top: 2px
+}
+
+.signup-prompt {
+    margin: 15px 0 0;
+    color: #756f66;
+    font-size: 12px;
+    text-align: center
+}
+
+.signup-prompt a {
+    color: #eb5e28;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px
+}
+
+.signup-prompt a:hover {
+    color: #b74316
 }
 
 .demo-login {

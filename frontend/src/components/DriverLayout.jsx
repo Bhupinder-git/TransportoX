@@ -1,3 +1,46 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom'
-import { useAuth } from '../auth/AuthContext'
-export default function DriverLayout() { const {session,logout}=useAuth(); const navigate=useNavigate(); return <div className="driver-shell"><header className="driver-topbar"><div className="brand"><span className="brand-mark">↗</span><span>Transporto<span className="accent">X</span></span></div><div className="driver-account"><span><i/> Driver online</span><b>{session?.name}</b><button onClick={()=>{logout();navigate('/login')}}>Log out</button></div></header><main className="driver-content"><Outlet/></main><nav className="driver-bottom-nav"><NavLink to="/driver/dashboard">⌂<small>Assignment</small></NavLink><NavLink to="/driver/incidents">⚠<small>Incidents</small></NavLink><NavLink to="/driver/profile">◎<small>Profile</small></NavLink></nav></div> }
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useAuth } from "../auth/AuthContext";
+export default function DriverLayout() {
+  const { session, logout } = useAuth();
+  const navigate = useNavigate();
+  return (
+    <div className="driver-shell">
+      <header className="driver-topbar">
+        <div className="brand">
+          <span className="brand-mark">↗</span>
+          <span>
+            Transporto<span className="accent">X</span>
+          </span>
+        </div>
+        <div className="driver-account">
+          <span>
+            <i /> Driver online
+          </span>
+          <b>{session?.name}</b>
+          <button
+            onClick={() => {
+              logout();
+              navigate("/login");
+            }}
+          >
+            Log out
+          </button>
+        </div>
+      </header>
+      <main className="driver-content">
+        <Outlet />
+      </main>
+      <nav className="driver-bottom-nav">
+        <NavLink to="/driver/dashboard">
+          ⌂<small>Assignment</small>
+        </NavLink>
+        <NavLink to="/driver/incidents">
+          ⚠<small>Incidents</small>
+        </NavLink>
+        <NavLink to="/driver/profile">
+          ◎<small>Profile</small>
+        </NavLink>
+      </nav>
+    </div>
+  );
+}

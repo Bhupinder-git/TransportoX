@@ -1,14 +1,14 @@
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../auth/AuthContext";
+import { Link } from "react-router-dom";
 
 export default function Login() {
-  const { session, login, loginAs } = useAuth();
+  const { session, login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [role, setRole] = useState("admin");
-  const [email, setEmail] = useState("admin@transportox.local");
-  const [password, setPassword] = useState("admin123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   if (session)
     return (
@@ -17,15 +17,9 @@ export default function Login() {
         replace
       />
     );
-  function changeRole(next) {
-    setRole(next);
-    setEmail(next === "admin" ? "admin@transportox.local" : next === "driver" ? "driver.ravi@transportox.local" : "user@transportox.local");
-    setPassword(next === "admin" ? "admin123" : next === "driver" ? "ravi123" : "user123");
-    setError("");
-  }
-  function submit(event) {
+  async function submit(event) {
     event.preventDefault();
-    const result = login(email, password);
+    const result = await login(email, password);
     if (result.ok)
       navigate(
         location.state?.from?.pathname ||
@@ -48,21 +42,6 @@ export default function Login() {
         <p className="login-copy">
           Sign in to access your logistics workspace.
         </p>
-        <div className="role-tabs">
-          <button
-            className={role === "admin" ? "selected" : ""}
-            onClick={() => changeRole("admin")}
-          >
-            Admin panel
-          </button>
-          <button
-            className={role === "user" ? "selected" : ""}
-            onClick={() => changeRole("user")}
-          >
-            User portal
-          </button>
-          <button className={role === "driver" ? "selected" : ""} onClick={() => changeRole("driver")}>Driver app</button>
-        </div>
         <form onSubmit={submit}>
           <label>
             Email address
@@ -85,28 +64,10 @@ export default function Login() {
             Sign in
           </button>
         </form>
-        <div className="demo-login">
-          <span>Demo access</span>
-          <button
-            onClick={() => {
-              loginAs("admin");
-              navigate("/admin/dashboard");
-            }}
-          >
-            Enter as Admin
-          </button>
-          <button
-            onClick={() => {
-              loginAs("user");
-              navigate("/user/dashboard");
-            }}
-          >
-            Enter as User
-          </button>
-        </div>
+        <p className="signup-prompt">Need an account? <Link to="/signup">Sign up as User or Admin</Link></p>
       </div>
       <div className="login-footer">
-        LOCAL DEMO ENVIRONMENT · NO EXTERNAL API REQUIRED
+        SECURE TRANSPORT OPERATIONS PLATFORM
       </div>
     </div>
   );
