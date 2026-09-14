@@ -35,6 +35,7 @@ import DriverDashboardRemote from "../pages/DriverDashboardRemote";
 import TrackingRemote from "../pages/TrackingRemote";
 import OptimizationRemote from "../pages/OptimizationRemote";
 import Signup from "../pages/Signup";
+import ContactSupport from "../pages/ContactSupport";
 
 function RequireAuth({ role, children }) {
   const { session } = useAuth();
@@ -97,6 +98,7 @@ export default function App() {
         <Route path="/user/request/new" element={isSupabaseConfigured ? <CreateDeliveryRequestRemote /> : <CreateDeliveryRequest />} />
         <Route path="/user/tracking/:id" element={isSupabaseConfigured ? <TrackingRemote /> : <Tracking customerMode />} />
         <Route path="/user/tracking" element={isSupabaseConfigured ? <TrackingRemote /> : <Tracking customerMode />} />
+        <Route path="/user/support" element={<ContactSupport />} />
       </Route>
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>

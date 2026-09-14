@@ -60,7 +60,7 @@ export default function UserLayout() {
         </nav>
         <div className="user-side-foot">
           <span>Need help?</span>
-          <b>Contact support</b>
+          <NavLink to="/user/support">Contact support</NavLink>
         </div>
       </aside>
       <div className="user-main">

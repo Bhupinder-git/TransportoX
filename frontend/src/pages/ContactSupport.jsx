@@ -1,0 +1,9 @@
+import { useState } from 'react'
+import PageHeader from '../components/PageHeader'
+
+export default function ContactSupport(){
+  const [form,setForm]=useState({issue:'Delivery update',orderId:'',message:''})
+  const [sent,setSent]=useState(false)
+  function submit(event){event.preventDefault();setSent(true)}
+  return <><PageHeader eyebrow="TRANSPORTOX SUPPORT" title="Contact support" description="Send a request to the operations team without leaving the customer portal."/><section className="user-panel support-page-panel">{sent?<div className="support-success"><span className="support-success-icon">✓</span><div><h2>Request received</h2><p>Your support request has been recorded. The operations team will review it and update your shipment notifications.</p></div><button className="button secondary-button" onClick={()=>{setSent(false);setForm({issue:'Delivery update',orderId:'',message:''})}}>Send another request</button></div>:<form className="support-form" onSubmit={submit}><div className="form-section-title"><span className="step-number">?</span><div><h2>How can we help?</h2><p>Include your order ID if your question is about a specific delivery.</p></div></div><label>Reason<select value={form.issue} onChange={event=>setForm({...form,issue:event.target.value})}><option>Delivery update</option><option>Change delivery instructions</option><option>Report a delay</option><option>Other</option></select></label><label>Order ID <small>(optional)</small><input value={form.orderId} onChange={event=>setForm({...form,orderId:event.target.value})} placeholder="Paste your shipment ID"/></label><label>Message<textarea required value={form.message} onChange={event=>setForm({...form,message:event.target.value})} placeholder="Tell us what you need help with..."/></label><button className="button primary-button" type="submit">Send support request</button></form>}</section></>
+}

@@ -65,7 +65,7 @@ export default function UserDashboard() {
             Our operations team monitors every shipment and can help with
             changes, delays, or delivery instructions.
           </p>
-          <button className="button secondary-button">Contact support</button>
+          <Link className="button secondary-button" to="/user/support">Contact support</Link>
         </section>
         <section className="user-panel notification-panel">
           <div className="user-panel-heading"><div><div className="eyebrow">NOTIFICATIONS</div><h2>Latest updates</h2></div><span className="notification-count">2 new</span></div>
