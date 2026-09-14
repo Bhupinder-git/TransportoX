@@ -7,6 +7,10 @@ VITE_SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY
 ```
 
+`VITE_SUPABASE_ANON_KEY` is also accepted as an alternative name for the publishable key.
+
+For Vercel, set the project Root Directory to `frontend`, add both variables for the Preview and Production environments, then redeploy. Vite embeds `VITE_*` values during the build, so changing a variable does not update an existing deployment until it is rebuilt.
+
 ## Apply the database
 
 From the repository root, install the Supabase CLI, link the project, and apply the migration:
