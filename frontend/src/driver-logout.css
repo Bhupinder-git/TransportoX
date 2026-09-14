@@ -1,0 +1,18 @@
+.driver-account button {
+    border: 1px solid #eb5e28;
+    background: #eb5e28;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease
+}
+
+.driver-account button:hover {
+    background: #a73400;
+    border-color: #a73400;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px #403d3925
+}

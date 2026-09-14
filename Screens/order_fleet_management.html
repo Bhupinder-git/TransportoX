@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@100..900&family=Roboto:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"surface-container": "#f1eee4", "surface-tint": "#ab3600", "on-secondary-fixed": "#1d1b18", "surface-dim": "#dcdad0", "secondary-fixed": "#e8e1db", "primary-fixed-dim": "#ffb59c", "error-container": "#ffdad6", "surface-container-low": "#f6f4ea", "on-surface": "#1c1c16", "on-background": "#1c1c16", "surface-variant": "#e5e2d9", "surface": "#fcf9ef", "primary": "#a73400", "background": "#fcf9ef", "on-tertiary": "#ffffff", "outline-variant": "#e1bfb4", "secondary-fixed-dim": "#cbc5c0", "on-primary-fixed-variant": "#822700", "surface-container-lowest": "#ffffff", "on-secondary-container": "#68645f", "on-tertiary-fixed": "#001e2e", "on-error": "#ffffff", "secondary": "#615e59", "error": "#ba1a1a", "on-primary": "#ffffff", "on-surface-variant": "#594139", "tertiary-container": "#007cb0", "tertiary": "#00628c", "tertiary-fixed-dim": "#87ceff", "surface-bright": "#fcf9ef", "inverse-on-surface": "#f4f1e7", "on-primary-container": "#fffbff", "primary-container": "#cc4811", "surface-container-high": "#ebe8de", "on-secondary": "#ffffff", "on-tertiary-container": "#fcfcff", "primary-fixed": "#ffdbcf", "surface-container-highest": "#e5e2d9", "on-primary-fixed": "#390c00", "inverse-primary": "#ffb59c", "on-error-container": "#93000a", "on-secondary-fixed-variant": "#494642", "secondary-container": "#e8e1db", "tertiary-fixed": "#c8e6ff", "inverse-surface": "#31312a", "outline": "#8d7168", "on-tertiary-fixed-variant": "#004c6d"}, "borderRadius": {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, "spacing": {"space-md": "0.75rem", "gutter": "0.75rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1rem", "space-xl": "1.5rem", "margin": "1rem"}, "fontFamily": {"label-lg": ["Roboto"], "headline-xl": ["Google Sans"], "label-sm": ["Roboto"], "body-lg": ["Roboto"], "label-md": ["Roboto"], "headline-md": ["Google Sans"], "headline-sm": ["Google Sans"], "mono-data": ["Roboto"], "body-sm": ["Roboto"], "headline-lg": ["Google Sans"], "body-md": ["Roboto"]}, "fontSize": {"label-lg": ["13px", {"lineHeight": "16px", "fontWeight": "500"}], "headline-xl": ["28px", {"lineHeight": "36px", "fontWeight": "500"}], "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}], "body-lg": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "14px", "fontWeight": "500"}], "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "500"}], "headline-sm": ["15px", {"lineHeight": "20px", "fontWeight": "500"}], "mono-data": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}], "body-md": ["13px", {"lineHeight": "18px", "fontWeight": "400"}]}}}};</script></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low border-r border-[#CCC5B9] z-50 flex flex-col pt-6 pb-8"><div class="px-6 mb-8 flex items-center gap-3"><span class="material-symbols-outlined text-primary text-[28px]">local_shipping</span><span class="text-headline-md font-headline font-bold text-on-surface tracking-tight uppercase">TransportoX</span></div><nav class="flex-1 px-3 space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-medium"><a class="flex items-center px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span>Dashboard</a><a class="flex items-center px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="vehicles" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">local_shipping</span>Vehicles</a><a aria-current="page" class="flex items-center px-4 py-2.5 rounded-lg transition-all bg-primary-container text-on-primary-container font-medium" data-path="orders" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">orders</span>Orders</a><a class="flex items-center px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="optimization" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">route</span>Optimization</a><a class="flex items-center px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="incidents" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">warning</span>Incidents</a><a class="flex items-center px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tracking" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">radar</span>Tracking</a><a class="flex items-center px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">settings</span>Settings</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl border-b border-[#CCC5B9] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-4"><span class="text-headline-md font-headline font-bold text-on-surface">Fleet Operations</span></div><div class="flex items-center gap-4"><button class="px-3 py-1.5 text-label-md font-medium text-on-surface-variant border border-[#CCC5B9] rounded hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">restart_alt</span>Reset Demo Data</button><div class="relative"><button class="p-2 text-on-surface-variant hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">person</span></div></div></header></div><main class="relative pt-16 bg-surface min-h-screen p-space-xl"><div class="flex flex-col w-full">
+<!-- Top Stats & Action Bar -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl">
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-center justify-between">
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Active Orders</p>
+<p class="text-headline-xl font-headline font-bold text-on-surface mt-space-xs">1,428</p>
+<span class="text-label-sm text-primary font-medium mt-1 inline-block">+12% from last week</span>
+</div>
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-[24px]">orders</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-center justify-between">
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">At Risk / Delayed</p>
+<p class="text-headline-xl font-headline font-bold text-error mt-space-xs">24</p>
+<span class="text-label-sm text-error font-medium mt-1 inline-block">Requires immediate action</span>
+</div>
+<div class="w-12 h-12 bg-error-container rounded-lg flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-center justify-between">
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">On-Time Delivery</p>
+<p class="text-headline-xl font-headline font-bold text-on-surface mt-space-xs">98.4%</p>
+<span class="text-label-sm text-tertiary font-medium mt-1 inline-block">Target: 97.5%</span>
+</div>
+<div class="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex items-center justify-between">
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Total Tonnage</p>
+<p class="text-headline-xl font-headline font-bold text-on-surface mt-space-xs">48.2t</p>
+<span class="text-label-sm text-on-surface-variant font-medium mt-1 inline-block">Across 84 routes</span>
+</div>
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">weight</span>
+</div>
+</div>
+</div>
+<!-- Filters & Controls Bar -->
+<div class="bg-surface-container-low p-space-lg rounded-xl mb-space-lg flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-3 flex-1">
+<!-- Search Input -->
+<div class="relative min-w-[240px] flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface text-on-surface text-body-md pl-10 pr-4 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary transition-colors" id="orderSearch" placeholder="Search Order ID, city, vehicle..." type="text"/>
+</div>
+<!-- Priority Filter -->
+<select class="bg-surface text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary transition-colors" id="filterPriority">
+<option value="">All Priorities</option>
+<option value="LOW">Low</option>
+<option value="NORMAL">Normal</option>
+<option value="HIGH">High</option>
+<option value="CRITICAL">Critical</option>
+</select>
+<!-- Status Filter -->
+<select class="bg-surface text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary transition-colors" id="filterStatus">
+<option value="">All Statuses</option>
+<option value="IN TRANSIT">In Transit</option>
+<option value="CUSTOMS HOLD">Customs Hold</option>
+<option value="DELIVERED">Delivered</option>
+<option value="DISPATCHING">Dispatching</option>
+<option value="DELAYED">Delayed</option>
+</select>
+<!-- At Risk Only Toggle -->
+<label class="flex items-center gap-2 cursor-pointer bg-surface px-3 py-2 rounded border border-[#CCC5B9] select-none">
+<input class="w-4 h-4 rounded border-[#CCC5B9] text-primary focus:ring-0" id="filterAtRisk" type="checkbox"/>
+<span class="text-label-md text-on-surface">At Risk Only</span>
+</label>
+</div>
+<!-- Create Order Primary Button -->
+<button class="bg-primary hover:bg-primary-container text-on-primary px-4 py-2 rounded text-label-lg flex items-center gap-2 transition-all shadow-sm" onclick="openCreateModal()">
+<span class="material-symbols-outlined text-[18px]">add</span>
+      Create Order
+    </button>
+</div>
+<!-- Enterprise Data Table -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden border border-[#CCC5B9]">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="ordersTable">
+<thead>
+<tr class="bg-surface-container-high border-b border-[#CCC5B9] text-label-md text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-4 font-medium">Order ID</th>
+<th class="py-3 px-4 font-medium">Pickup</th>
+<th class="py-3 px-4 font-medium">Destination</th>
+<th class="py-3 px-4 font-medium text-right">Weight</th>
+<th class="py-3 px-4 font-medium">Priority</th>
+<th class="py-3 px-4 font-medium">Deadline</th>
+<th class="py-3 px-4 font-medium">Status</th>
+<th class="py-3 px-4 font-medium">Assigned Vehicle</th>
+<th class="py-3 px-4 font-medium">ETA</th>
+<th class="py-3 px-4 font-medium text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#CCC5B9] text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors" data-priority="CRITICAL" data-risk="true" data-status="DELAYED">
+<td class="py-3 px-4 font-mono-data font-bold text-primary">#TR-9821</td>
+<td class="py-3 px-4">Rotterdam Port, NL</td>
+<td class="py-3 px-4">Frankfurt Hub, DE</td>
+<td class="py-3 px-4 text-right font-mono-data">4,250 kg</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase bg-error-container text-on-error-container font-bold">Critical</span>
+</td>
+<td class="py-3 px-4">
+<div class="font-mono-data">10:30 AM</div>
+<div class="text-label-sm text-error font-medium">in 2h 14m (Risk)</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase border border-[#CCC5B9] bg-surface">Delayed</span>
+</td>
+<td class="py-3 px-4 font-mono-data">VH-402 (Volvo FH)</td>
+<td class="py-3 px-4 font-mono-data text-error">12:45 PM</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="viewOrderDetails('#TR-9821')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="openEditModal('#TR-9821')" title="Edit Order">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors" data-priority="HIGH" data-risk="true" data-status="CUSTOMS HOLD">
+<td class="py-3 px-4 font-mono-data font-bold text-primary">#TR-9822</td>
+<td class="py-3 px-4">Antwerp Port, BE</td>
+<td class="py-3 px-4">Paris Central, FR</td>
+<td class="py-3 px-4 text-right font-mono-data">2,800 kg</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase bg-primary-fixed text-on-primary-fixed font-bold">High</span>
+</td>
+<td class="py-3 px-4">
+<div class="font-mono-data">02:15 PM</div>
+<div class="text-label-sm text-on-surface-variant">in 5h 50m</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase border border-[#CCC5B9] bg-surface">Customs Hold</span>
+</td>
+<td class="py-3 px-4 font-mono-data">VH-109 (Scania R)</td>
+<td class="py-3 px-4 font-mono-data">03:00 PM</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="viewOrderDetails('#TR-9822')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="openEditModal('#TR-9822')" title="Edit Order">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors" data-priority="NORMAL" data-risk="false" data-status="IN TRANSIT">
+<td class="py-3 px-4 font-mono-data font-bold text-primary">#TR-9823</td>
+<td class="py-3 px-4">Hamburg Port, DE</td>
+<td class="py-3 px-4">Warsaw Depot, PL</td>
+<td class="py-3 px-4 text-right font-mono-data">6,120 kg</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase bg-surface-container text-on-surface-variant">Normal</span>
+</td>
+<td class="py-3 px-4">
+<div class="font-mono-data">Tomorrow, 08:00 AM</div>
+<div class="text-label-sm text-tertiary font-medium">On Schedule</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase border border-[#CCC5B9] bg-surface">In Transit</span>
+</td>
+<td class="py-3 px-4 font-mono-data">VH-512 (MAN TGX)</td>
+<td class="py-3 px-4 font-mono-data">07:30 AM</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="viewOrderDetails('#TR-9823')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="openEditModal('#TR-9823')" title="Edit Order">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-colors" data-priority="LOW" data-risk="false" data-status="DELIVERED">
+<td class="py-3 px-4 font-mono-data font-bold text-primary">#TR-9824</td>
+<td class="py-3 px-4">Milan Freight, IT</td>
+<td class="py-3 px-4">Zurich Hub, CH</td>
+<td class="py-3 px-4 text-right font-mono-data">1,200 kg</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase bg-surface-container text-on-surface-variant">Low</span>
+</td>
+<td class="py-3 px-4">
+<div class="font-mono-data">Yesterday</div>
+<div class="text-label-sm text-tertiary font-medium">Completed</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase border border-[#CCC5B9] bg-surface-container-high">Delivered</span>
+</td>
+<td class="py-3 px-4 font-mono-data">VH-204 (Mercedes Actros)</td>
+<td class="py-3 px-4 font-mono-data">Delivered</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="viewOrderDetails('#TR-9824')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="openEditModal('#TR-9824')" title="Edit Order">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container transition-colors" data-priority="CRITICAL" data-risk="false" data-status="DISPATCHING">
+<td class="py-3 px-4 font-mono-data font-bold text-primary">#TR-9825</td>
+<td class="py-3 px-4">Valencia Depot, ES</td>
+<td class="py-3 px-4">Madrid Central, ES</td>
+<td class="py-3 px-4 text-right font-mono-data">5,000 kg</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase bg-error-container text-on-error-container font-bold">Critical</span>
+</td>
+<td class="py-3 px-4">
+<div class="font-mono-data">04:00 PM</div>
+<div class="text-label-sm text-on-surface-variant">in 7h 30m</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm uppercase border border-[#CCC5B9] bg-surface">Dispatching</span>
+</td>
+<td class="py-3 px-4 font-mono-data">Unassigned</td>
+<td class="py-3 px-4 font-mono-data">--:--</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="viewOrderDetails('#TR-9825')" title="View Details">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" onclick="openEditModal('#TR-9825')" title="Edit Order">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination -->
+<div class="p-space-md bg-surface-container border-t border-[#CCC5B9] flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Showing 1-5 of 1,428 orders</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded border border-[#CCC5B9] bg-surface text-on-surface hover:bg-surface-container-high disabled:opacity-50" disabled="">Prev</button>
+<button class="px-3 py-1 rounded border border-primary bg-primary text-on-primary">1</button>
+<button class="px-3 py-1 rounded border border-[#CCC5B9] bg-surface text-on-surface hover:bg-surface-container-high">2</button>
+<button class="px-3 py-1 rounded border border-[#CCC5B9] bg-surface text-on-surface hover:bg-surface-container-high">3</button>
+<button class="px-3 py-1 rounded border border-[#CCC5B9] bg-surface text-on-surface hover:bg-surface-container-high">Next</button>
+</div>
+</div>
+</div>
+<!-- Create / Edit Order Dialog (Hidden by default) -->
+<div class="fixed inset-0 bg-inverse-surface/50 backdrop-blur-sm z-50 flex items-center justify-center hidden" id="orderModal">
+<div class="bg-surface border border-[#CCC5B9] rounded-xl w-full max-w-2xl overflow-hidden shadow-xl">
+<div class="bg-surface-container px-6 py-4 border-b border-[#CCC5B9] flex items-center justify-between">
+<h3 class="text-headline-md font-headline font-bold text-on-surface" id="modalTitle">Create New Order</h3>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="p-6 space-y-4" id="orderForm" onsubmit="handleFormSubmit(event)">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md text-on-surface-variant mb-1">Pickup Location</label>
+<input class="w-full bg-surface-container-low text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary" placeholder="e.g. Rotterdam Port, NL" required="" type="text"/>
+</div>
+<div>
+<label class="block text-label-md text-on-surface-variant mb-1">Destination Location</label>
+<input class="w-full bg-surface-container-low text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary" placeholder="e.g. Berlin Hub, DE" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div>
+<label class="block text-label-md text-on-surface-variant mb-1">Weight (kg)</label>
+<input class="w-full bg-surface-container-low text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary" placeholder="3500" required="" type="number"/>
+</div>
+<div>
+<label class="block text-label-md text-on-surface-variant mb-1">Priority</label>
+<select class="w-full bg-surface-container-low text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary">
+<option value="LOW">Low</option>
+<option selected="" value="NORMAL">Normal</option>
+<option value="HIGH">High</option>
+<option value="CRITICAL">Critical</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md text-on-surface-variant mb-1">Assign Vehicle</label>
+<select class="w-full bg-surface-container-low text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary">
+<option value="">Unassigned</option>
+<option value="VH-402">VH-402 (Volvo FH)</option>
+<option value="VH-109">VH-109 (Scania R)</option>
+<option value="VH-512">VH-512 (MAN TGX)</option>
+<option value="VH-204">VH-204 (Mercedes Actros)</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md text-on-surface-variant mb-1">Deadline Date & Time</label>
+<input class="w-full bg-surface-container-low text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary" required="" type="datetime-local"/>
+</div>
+<div>
+<label class="block text-label-md text-on-surface-variant mb-1">Initial Status</label>
+<select class="w-full bg-surface-container-low text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary">
+<option value="DISPATCHING">Dispatching</option>
+<option value="IN TRANSIT">In Transit</option>
+<option value="CUSTOMS HOLD">Customs Hold</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-label-md text-on-surface-variant mb-1">Cargo Details / Notes</label>
+<textarea class="w-full bg-surface-container-low text-on-surface text-body-md px-3 py-2 rounded border border-[#CCC5B9] focus:outline-none focus:border-primary" placeholder="Enter fragile handling instructions, custom manifest IDs..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-end gap-3 pt-4 border-t border-[#CCC5B9]">
+<button class="px-4 py-2 rounded border border-[#CCC5B9] text-on-surface hover:bg-surface-container" onclick="closeModal()" type="button">Cancel</button>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-5 py-2 rounded text-label-lg transition-all" type="submit">Save Order</button>
+</div>
+</form>
+</div>
+</div>
+<!-- View Details Dialog (Hidden by default) -->
+<div class="fixed inset-0 bg-inverse-surface/50 backdrop-blur-sm z-50 flex items-center justify-center hidden" id="detailsModal">
+<div class="bg-surface border border-[#CCC5B9] rounded-xl w-full max-w-xl overflow-hidden shadow-xl">
+<div class="bg-surface-container px-6 py-4 border-b border-[#CCC5B9] flex items-center justify-between">
+<h3 class="text-headline-md font-headline font-bold text-on-surface" id="detailsTitle">Order Details: #TR-9821</h3>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeDetailsModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-6 space-y-4">
+<div class="grid grid-cols-2 gap-4 bg-surface-container-low p-4 rounded-lg">
+<div>
+<span class="text-label-sm text-on-surface-variant uppercase">Route</span>
+<p class="text-body-md font-medium text-on-surface mt-0.5">Rotterdam Port, NL → Frankfurt Hub, DE</p>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant uppercase">Assigned Unit</span>
+<p class="text-body-md font-mono-data font-medium text-primary mt-0.5">VH-402 (Volvo FH)</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-body-sm py-1 border-b border-[#CCC5B9]">
+<span class="text-on-surface-variant">Weight</span>
+<span class="font-mono-data text-on-surface">4,250 kg</span>
+</div>
+<div class="flex justify-between text-body-sm py-1 border-b border-[#CCC5B9]">
+<span class="text-on-surface-variant">Priority Level</span>
+<span class="font-medium text-error">CRITICAL</span>
+</div>
+<div class="flex justify-between text-body-sm py-1 border-b border-[#CCC5B9]">
+<span class="text-on-surface-variant">Current Status</span>
+<span class="font-medium text-on-surface">Delayed (Traffic Congestion at Cologne Border)</span>
+</div>
+<div class="flex justify-between text-body-sm py-1 border-b border-[#CCC5B9]">
+<span class="text-on-surface-variant">Deadline & ETA</span>
+<span class="font-mono-data text-on-surface">10:30 AM (ETA: 12:45 PM)</span>
+</div>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant uppercase">Telemetry & Live GPS Checkpoint</span>
+<div class="w-full h-32 bg-cover bg-center rounded-lg mt-2 border border-[#CCC5B9] flex items-center justify-center text-on-surface-variant" data-location="Frankfurt, Germany" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDn2jrd7dQ-gG7UtLxAaoQHq-8K3gN93nL43W9ezUArirMRhub1j99xWuzpxSCnm2fKmdIL0T6yBSfJhjkodPr0oDfFBNM7uIxluYXu6QYhBlBQmg-hOvxuMsdOXpSKzyhswJPboeDqLhANUQyUWbg-V2Wph8q5tVpVaVkHOKPRaGE7jFafoYm-fjR1s70ZcxPM8NLrrSY8DWMdE-NIy_-OZBcqUXIhz2T9XnfhaTqGTVf6MhU-88cK')">
+<span class="bg-surface/90 px-3 py-1 rounded text-label-md font-mono-data border border-[#CCC5B9]">GPS: 50.1109° N, 8.6821° E • Speed: 78 km/h</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3 pt-4 border-t border-[#CCC5B9]">
+<button class="px-4 py-2 rounded bg-primary text-on-primary text-label-lg" onclick="closeDetailsModal()" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Client-side Filtering & Modal Script -->
+<script>
+    function filterTable() {
+      const searchVal = document.getElementById('orderSearch').value.toLowerCase();
+      const priorityVal = document.getElementById('filterPriority').value;
+      const statusVal = document.getElementById('filterStatus').value;
+      const atRiskOnly = document.getElementById('filterAtRisk').checked;
+
+      const rows = document.querySelectorAll('#ordersTable tbody tr');
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const rowPriority = row.getAttribute('data-priority');
+        const rowStatus = row.getAttribute('data-status');
+        const rowRisk = row.getAttribute('data-risk') === 'true';
+
+        let matchesSearch = text.includes(searchVal);
+        let matchesPriority = !priorityVal || rowPriority === priorityVal;
+        let matchesStatus = !statusVal || rowStatus === statusVal;
+        let matchesRisk = !atRiskOnly || rowRisk;
+
+        if (matchesSearch && matchesPriority && matchesStatus && matchesRisk) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    document.getElementById('orderSearch').addEventListener('input', filterTable);
+    document.getElementById('filterPriority').addEventListener('change', filterTable);
+    document.getElementById('filterStatus').addEventListener('change', filterTable);
+    document.getElementById('filterAtRisk').addEventListener('change', filterTable);
+
+    function openCreateModal() {
+      document.getElementById('modalTitle').innerText = 'Create New Order';
+      document.getElementById('orderForm').reset();
+      document.getElementById('orderModal').classList.remove('hidden');
+    }
+
+    function openEditModal(orderId) {
+      document.getElementById('modalTitle').innerText = 'Edit Order ' + orderId;
+      document.getElementById('orderModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('orderModal').classList.add('hidden');
+    }
+
+    function viewOrderDetails(orderId) {
+      document.getElementById('detailsTitle').innerText = 'Order Details: ' + orderId;
+      document.getElementById('detailsModal').classList.remove('hidden');
+    }
+
+    function closeDetailsModal() {
+      document.getElementById('detailsModal').classList.add('hidden');
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      alert('Order successfully saved & dispatched to dispatch queue.');
+      closeModal();
+    }
+  </script>
+</div></main></body></html>

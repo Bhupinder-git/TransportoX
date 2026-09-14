@@ -1,0 +1,571 @@
+.role-tabs {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.admin-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 14px
+}
+
+.admin-kpis>div {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 17px
+}
+
+.admin-kpis span {
+    display: block;
+    color: var(--muted);
+    font: 600 9px 'Roboto Mono'
+}
+
+.admin-kpis b {
+    display: block;
+    font: 600 25px 'Google Sans';
+    margin-top: 9px
+}
+
+.admin-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 14px
+}
+
+.verification-row {
+    display: grid;
+    grid-template-columns: 1.3fr .8fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 0;
+    border-top: 1px solid var(--line);
+    font-size: 11px
+}
+
+.verification-row span,
+.incident-strip small {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 4px
+}
+
+.queue-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px
+}
+
+.queue-actions button {
+    background: transparent;
+    border: 1px solid var(--line);
+    padding: 6px 8px;
+    font-size: 10px;
+    cursor: pointer
+}
+
+.queue-actions .accept {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary)
+}
+
+.queue-actions .reject {
+    color: var(--danger)
+}
+
+.incident-strip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 0;
+    border-top: 1px solid var(--line);
+    font-size: 11px
+}
+
+.incident-strip div {
+    flex: 1
+}
+
+.incident-strip a {
+    color: var(--primary);
+    font-size: 10px
+}
+
+.ai-workflow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px
+}
+
+.workflow-steps {
+    display: flex;
+    gap: 20px
+}
+
+.workflow-steps>div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted);
+    font-size: 10px
+}
+
+.workflow-steps b {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--surface-2)
+}
+
+.workflow-steps .complete b {
+    background: var(--primary);
+    color: #fff
+}
+
+.driver-admin-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 14px
+}
+
+.driver-form {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px
+}
+
+.driver-form label {
+    display: grid;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600
+}
+
+.driver-form input {
+    border: 1px solid var(--line);
+    padding: 10px;
+    background: var(--bg)
+}
+
+.credential-card {
+    display: grid;
+    gap: 6px;
+    background: #e6f1e8;
+    border: 1px solid #b5d2bb;
+    padding: 14px;
+    margin-top: 16px;
+    font-size: 11px
+}
+
+.credential-card small {
+    color: var(--muted);
+    margin-top: 4px
+}
+
+.driver-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid var(--line);
+    padding: 13px 0;
+    font-size: 12px
+}
+
+.driver-row>div:nth-child(2) {
+    flex: 1
+}
+
+.driver-row span {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 4px
+}
+
+.driver-shell {
+    min-height: 100vh;
+    background: var(--bg)
+}
+
+.driver-topbar {
+    height: 70px;
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(20px, calc((100vw - 850px)/2))
+}
+
+.driver-topbar .brand {
+    padding: 0;
+    font-size: 19px
+}
+
+.driver-account {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 11px
+}
+
+.driver-account span {
+    color: var(--green)
+}
+
+.driver-account i,
+.driver-online i {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    margin-right: 5px
+}
+
+.driver-account button {
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer
+}
+
+.driver-content {
+    width: min(100% - 32px, 850px);
+    margin: auto;
+    padding: 28px 0 80px
+}
+
+.driver-greeting {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 22px
+}
+
+.driver-greeting h1 {
+    font: 600 25px 'Google Sans';
+    margin: 8px 0
+}
+
+.driver-greeting p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 12px
+}
+
+.driver-online {
+    font: 600 10px 'Roboto Mono';
+    color: var(--green)
+}
+
+.driver-assignment-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 20px
+}
+
+.assignment-card-head {
+    display: flex;
+    justify-content: space-between
+}
+
+.assignment-card-head h2 {
+    font: 600 22px 'Google Sans';
+    margin: 7px 0
+}
+
+.assignment-card-head p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 12px
+}
+
+.driver-status-badge {
+    background: #e1f0f5;
+    color: var(--blue);
+    font: 600 10px 'Roboto Mono';
+    padding: 5px 7px;
+    height: max-content
+}
+
+.driver-map {
+    height: 260px;
+    background: #e5e2d9;
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+    background-image: radial-gradient(#8d7168 1px, transparent 1px);
+    background-size: 24px 24px
+}
+
+.driver-route-line {
+    position: absolute;
+    left: 12%;
+    top: 65%;
+    width: 75%;
+    height: 2px;
+    background: var(--primary);
+    transform: rotate(-24deg);
+    transform-origin: left
+}
+
+.driver-map-pin {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font: 600 11px 'Roboto Mono';
+    z-index: 2
+}
+
+.driver-map-pin.start {
+    left: 10%;
+    top: 65%;
+    background: var(--blue);
+    color: #fff
+}
+
+.driver-map-pin.current {
+    left: 51%;
+    top: 37%;
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 0 0 7px #eb5e2844
+}
+
+.driver-map-pin.end {
+    right: 10%;
+    top: 14%;
+    background: var(--charcoal);
+    color: #fff
+}
+
+.map-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: var(--surface);
+    padding: 7px 10px;
+    font: 10px 'Roboto Mono';
+    border: 1px solid var(--line)
+}
+
+.driver-stops {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+}
+
+.driver-stops>div {
+    border-top: 1px solid var(--line);
+    padding-top: 11px
+}
+
+.driver-stops b,
+.driver-stops span {
+    display: block
+}
+
+.driver-stops span {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 5px
+}
+
+.failure-button {
+    width: 100%;
+    background: var(--danger);
+    border: 1px solid var(--danger);
+    color: #fff;
+    padding: 15px;
+    margin: 16px 0;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px
+}
+
+.driver-ai-card {
+    background: #f2eefb;
+    border: 1px solid #d2c6ec;
+    padding: 18px
+}
+
+.driver-ai-card h2 {
+    font: 500 18px 'Google Sans';
+    margin: 8px 0 15px
+}
+
+.driver-ai-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px
+}
+
+.driver-ai-steps span {
+    font-size: 10px;
+    border-left: 2px solid var(--purple);
+    padding-left: 8px;
+    color: #665c78
+}
+
+.driver-alert {
+    background: #e6f1e8;
+    border: 1px solid #b5d2bb;
+    padding: 13px;
+    margin-bottom: 15px;
+    font-size: 12px
+}
+
+.driver-alert span {
+    display: block;
+    color: var(--muted);
+    margin-top: 4px
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #25242288;
+    display: grid;
+    place-items: center;
+    z-index: 20;
+    padding: 20px
+}
+
+.failure-modal {
+    position: relative;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    padding: 25px;
+    width: min(100%, 390px)
+}
+
+.failure-modal h2 {
+    font: 500 21px 'Google Sans';
+    margin: 7px 0
+}
+
+.failure-modal p {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.modal-close {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    border: 0;
+    background: transparent;
+    font-size: 23px;
+    color: var(--muted);
+    cursor: pointer
+}
+
+.issue-option {
+    display: block;
+    border: 1px solid var(--line);
+    padding: 11px;
+    margin: 7px 0;
+    font-size: 12px;
+    cursor: pointer
+}
+
+.issue-option input {
+    margin-right: 8px
+}
+
+.driver-bottom-nav {
+    display: none
+}
+
+@media(max-width:720px) {
+    .admin-kpis {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .admin-dashboard-grid,
+    .driver-admin-grid {
+        grid-template-columns: 1fr
+    }
+
+    .verification-row {
+        grid-template-columns: 1fr auto
+    }
+
+    .queue-actions {
+        grid-column: 1/-1;
+        justify-content: flex-start
+    }
+
+    .ai-workflow {
+        display: block
+    }
+
+    .workflow-steps {
+        overflow: auto;
+        margin-top: 16px;
+        padding-bottom: 5px
+    }
+
+    .driver-topbar {
+        padding: 0 16px
+    }
+
+    .driver-account b {
+        display: none
+    }
+
+    .driver-content {
+        width: calc(100% - 24px);
+        padding-top: 20px
+    }
+
+    .driver-greeting h1 {
+        font-size: 21px
+    }
+
+    .driver-map {
+        height: 220px
+    }
+
+    .driver-ai-steps {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .driver-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-top: 1px solid var(--line);
+        display: flex;
+        justify-content: space-around;
+        padding: 8px;
+        z-index: 10
+    }
+
+    .driver-bottom-nav a {
+        color: var(--muted);
+        text-decoration: none;
+        text-align: center;
+        font-size: 19px
+    }
+
+    .driver-bottom-nav a.active {
+        color: var(--primary)
+    }
+
+    .driver-bottom-nav small {
+        display: block;
+        font-size: 9px
+    }
+}

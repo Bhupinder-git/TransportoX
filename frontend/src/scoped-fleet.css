@@ -1,0 +1,58 @@
+.map-fullscreen-button {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 4;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--charcoal);
+    padding: 7px 9px;
+    font-size: 10px;
+    cursor: pointer
+}
+
+.driver-map.map-fullscreen {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #e5e2d9
+}
+
+.driver-map.map-fullscreen .map-caption {
+    bottom: 24px;
+    left: 24px
+}
+
+.failure-reason {
+    width: 100%;
+    min-height: 90px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    padding: 10px;
+    resize: vertical;
+    font: 12px Roboto;
+    margin-top: 8px
+}
+
+.vehicle-modal {
+    max-height: 90vh;
+    overflow: auto
+}
+
+.driver-form-label {
+    display: grid;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 10px
+}
+
+.driver-form-label input,
+.driver-form-label select {
+    border: 1px solid var(--line);
+    background: var(--bg);
+    padding: 10px
+}
