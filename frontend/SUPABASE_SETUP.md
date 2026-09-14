@@ -7,6 +7,29 @@ VITE_SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY
 ```
 
+## Routing without a Node server
+
+Routing runs through the deployed Supabase Edge Function `routing`. The ORS key is stored only as the Supabase secret `ORS_API_KEY`; it is never exposed in frontend code. The function provides geocoding, OpenRouteService directions, and INR fare estimation. The frontend draws the returned GeoJSON route with Leaflet and OpenStreetMap tiles.
+
+Set the secret once:
+
+```powershell
+npx supabase secrets set ORS_API_KEY="your_ors_key" --project-ref YOUR_PROJECT_REF
+npx supabase functions deploy routing --project-ref YOUR_PROJECT_REF
+```
+
+The routing function can use Gemini to optimize the verified route fare and ETA. Keep the Gemini key server-side as a Supabase secret, then deploy both functions:
+
+```powershell
+npx supabase secrets set GEMINI_API_KEY="your_gemini_key" --project-ref YOUR_PROJECT_REF
+npx supabase functions deploy routing --project-ref YOUR_PROJECT_REF
+npx supabase functions deploy recover-failure --project-ref YOUR_PROJECT_REF
+```
+
+If Gemini is unavailable, the app uses the deterministic INR fare and route duration returned by OpenRouteService. It never displays a price or ETA before both addresses are geocoded and the route is calculated.
+
+No Node, Express, Render, or other server process is required for the frontend routing flow.
+
 `VITE_SUPABASE_ANON_KEY` is also accepted as an alternative name for the publishable key.
 
 For Vercel, set the project Root Directory to `frontend`, add both variables for the Preview and Production environments, then redeploy. Vite embeds `VITE_*` values during the build, so changing a variable does not update an existing deployment until it is rebuilt.
@@ -22,6 +45,8 @@ supabase db push --workdir frontend
 ```
 
 The migrations create companies, profiles, vehicles, drivers, delivery requests, delivery images, incidents, invoices, notifications, order events, marketplace pricing fields, RLS policies, and the private `delivery-images` bucket.
+
+The vehicle-recovery migration also adds vehicle coordinates, a PostGIS nearest-vehicle lookup, and recovery requests. When a driver raises a failure, the recovery function requests a nearby eligible vehicle first; if none is available it records a repair-center dispatch and updates the order ETA and customer notification.
 
 ## Driver registration function
 

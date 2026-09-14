@@ -15,6 +15,7 @@ import "./scoped-fleet.css";
 import "./polish.css";
 import "./driver-logout.css";
 import "./notification-icon.css";
+import "leaflet/dist/leaflet.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

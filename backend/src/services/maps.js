@@ -1,0 +1,6 @@
+import { env } from '../config/env.js'
+
+function requireMapsKey() { if (!env.googleMapsKey) { const error = new Error('GOOGLE_MAPS_API_KEY is not configured'); error.status = 503; throw error } }
+async function googleJson(endpoint, params) { requireMapsKey(); const url = `https://maps.googleapis.com/maps/api/${endpoint}?${new URLSearchParams({ ...params, key: env.googleMapsKey })}`; const response = await fetch(url); const data = await response.json(); if (!response.ok || data.status !== 'OK') { const error = new Error(data.error_message || `Google Maps request failed: ${data.status}`); error.status = 502; throw error } return data }
+export async function geocodeAddress(address) { const data = await googleJson('geocode/json', { address }); const item = data.results[0]; return { formatted_address: item.formatted_address, lat: item.geometry.location.lat, lng: item.geometry.location.lng, place_id: item.place_id } }
+export async function calculateRoute(origin, destination) { const data = await googleJson('directions/json', { origin, destination, mode: 'driving' }); const leg = data.routes[0].legs[0]; return { distance_km: Math.round((leg.distance.value / 1000) * 1000) / 1000, duration_min: Math.ceil(leg.duration.value / 60), encoded_polyline: data.routes[0].overview_polyline.points } }

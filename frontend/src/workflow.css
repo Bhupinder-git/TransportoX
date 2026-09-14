@@ -3,6 +3,62 @@
     gap: 14px
 }
 
+.request-form > .user-panel:first-child {
+    border-top: 3px solid #eb5e28;
+    background: #fbf9f1;
+    box-shadow: 0 8px 24px #403d3909
+}
+
+.request-form > .user-panel:first-child .form-section-title {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ded7ca
+}
+
+.request-form > .user-panel:first-child .form-grid {
+    gap: 18px 16px
+}
+
+.request-form > .user-panel:first-child .form-grid label {
+    align-content: start;
+    gap: 4px;
+    color: #252422;
+    letter-spacing: .1px
+}
+
+.request-form > .user-panel:first-child .form-grid input,
+.request-form > .user-panel:first-child .form-grid textarea {
+    height: 44px;
+    min-height: 0;
+    border-radius: 8px;
+    border-color: #cfc7ba;
+    background: #fffdf7;
+    color: #252422;
+    transition: border-color .18s ease, box-shadow .18s ease, background .18s ease
+}
+
+.request-form > .user-panel:first-child .form-grid textarea {
+    height: auto;
+    min-height: 96px
+}
+
+.request-form > .user-panel:first-child .form-grid input:hover,
+.request-form > .user-panel:first-child .form-grid textarea:hover {
+    border-color: #a99c8e
+}
+
+.request-form > .user-panel:first-child .form-grid input:focus,
+.request-form > .user-panel:first-child .form-grid textarea:focus {
+    border-color: #eb5e28;
+    background: #fff;
+    box-shadow: 0 0 0 3px #eb5e281c
+}
+
+.request-form > .user-panel:first-child > .secondary-button {
+    margin-top: 14px;
+    border-radius: 7px;
+    padding: 11px 16px
+}
+
 .form-section-title {
     display: flex;
     align-items: flex-start;
@@ -109,6 +165,15 @@
 
 .upload-box small {
     font-size: 10px
+}
+
+.upload-box:has(+ small) b {
+    font-size: 0
+}
+
+.upload-box:has(+ small) b::after {
+    content: "Images selected";
+    font-size: 12px
 }
 
 .image-previews {
@@ -330,7 +395,42 @@
 }
 
 .admin-request-card .badge {
-    border-radius: 4px
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 0;
+    padding: 8px 11px;
+    border: 1px solid #cfc8bc;
+    border-radius: 999px;
+    background: #f8f6ef;
+    color: #625d56;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: .5px;
+    text-transform: uppercase
+}
+
+.admin-request-card .badge::before {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+    content: "";
+    flex: 0 0 auto
+}
+
+.admin-request-card .badge-assigned,
+.admin-request-card .badge-vehicle-assigned {
+    border-color: #b7d2de;
+    background: #eef6f8;
+    color: #17627b
+}
+
+.admin-request-card .badge-breakdown {
+    border-color: #e5b8ae;
+    background: #fff5f1;
+    color: #b44932
 }
 
 @media(max-width:900px) {

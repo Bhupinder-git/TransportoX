@@ -1,0 +1,2 @@
+export function notFound(request, response) { response.status(404).json({ error: 'Route not found' }) }
+export function errorHandler(error, request, response, next) { console.error(error); const status = error.status || (error.name === 'ZodError' ? 400 : 500); response.status(status).json({ error: error.message || 'Internal server error', details: error.name === 'ZodError' ? error.issues : undefined }) }

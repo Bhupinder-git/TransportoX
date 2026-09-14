@@ -88,16 +88,6 @@ export default function DriverDashboard() {
       <button className="failure-button" onClick={() => setModal(true)}>
         ⚠ Raise Failure
       </button>
-      <section className="driver-ai-card">
-        <div className="eyebrow">AI AUTOMATION CENTER</div>
-        <h2>What happens when you raise a failure?</h2>
-        <div className="driver-ai-steps">
-          <span>1. AI reassigns the load</span>
-          <span>2. Nearest repair center routed</span>
-          <span>3. ETA recalculated</span>
-          <span>4. Customer notified</span>
-        </div>
-      </section>
       {modal && (
         <div className="modal-backdrop">
           <div className="failure-modal">

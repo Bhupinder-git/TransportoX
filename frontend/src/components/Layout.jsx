@@ -60,12 +60,6 @@ export default function Layout() {
             <div className="top-title">{title}</div>
           </div>
           <div className="top-actions">
-            <NavLink className="audience-link" to="/admin/customer/tracking">
-              Customer portal
-            </NavLink>
-            <NavLink className="audience-link" to="/admin/driver">
-              Driver view
-            </NavLink>
             <span className="live">
               <i /> LIVE SIMULATION
             </span>

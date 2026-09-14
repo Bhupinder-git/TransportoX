@@ -115,6 +115,12 @@
     color: #b74316
 }
 
+.route-map-shell{height:320px;margin-top:18px;border:1px solid var(--line);background:#e7e4dc;position:relative}.route-map-canvas{height:100%;width:100%}.map-provider-label{position:absolute;bottom:5px;right:7px;background:#fffcf2dd;padding:3px 6px;color:#756f66;z-index:500}.map-fullscreen-button{position:absolute;right:12px;top:12px;z-index:2000!important;background:#fffcf2;border:1px solid var(--line);padding:9px 12px;cursor:pointer;pointer-events:auto}.map-fullscreen-button:hover{background:#f4d9ce}.route-map-fullscreen{position:fixed;inset:0;z-index:2100;height:100vh!important;width:100vw;background:#e7e4dc;padding:18px}.route-map-fullscreen .route-map-canvas{height:100%}.route-quote{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.route-quote span{display:grid;gap:5px;padding:12px;background:var(--surface);border:1px solid var(--line)}.route-quote small{font:600 9px 'Roboto Mono';color:var(--muted)}.route-quote b{font-size:15px}.driver-live-map .route-map-shell{margin-top:0}@media(max-width:700px){.route-quote{grid-template-columns:repeat(2,1fr)}.route-map-shell{height:250px}}
+.fleet-map{position:relative}.fleet-map-fullscreen{position:fixed!important;inset:0;z-index:2100;height:100vh!important;width:100vw;background:var(--surface);padding:18px}.fleet-map-fullscreen .map-grid{height:100%}.fleet-map-fullscreen-button{position:absolute;right:12px;top:12px;z-index:20;background:var(--surface);border:1px solid var(--line);padding:9px 12px;cursor:pointer}.fleet-map-fullscreen-button:hover{background:#f4d9ce}
+.fleet-map .route-map-shell{margin-top:10px}.map-data-notice{display:block;margin-top:8px;color:var(--muted);font-size:11px}
+.location-valid{display:block;color:#287a52;font-size:11px;line-height:1.35}.estimate-source{display:block;margin-top:8px;color:var(--muted);font-size:11px}
+
+
 .demo-login {
     border-top: 1px solid #ccc5b9;
     margin-top: 22px;

@@ -1,42 +1,18 @@
 import { getVehicles } from "../services/vehicleStore";
+import RouteMap from "./RouteMap";
+
 export default function FleetMap({ compact = false, companyId, vehicleData }) {
   const vehicles = vehicleData || getVehicles(companyId);
+  const hasCoordinates = vehicles.some((vehicle) => vehicle.current_lat != null && vehicle.current_lng != null);
+
   return (
     <div className={`fleet-map ${compact ? "compact" : ""}`}>
       <div className="map-toolbar">
         <span>LIVE FLEET MAP</span>
-        <span className="map-status">
-          <i /> SIMULATED TELEMETRY
-        </span>
+        <span className="map-status"><i /> OPENSTREETMAP / ORS</span>
       </div>
-      <div className="map-grid" />
-      <div className="map-road road-a" />
-      <div className="map-road road-b" />
-      <div className="map-road road-c" />
-      <div className="route-line route-one" />
-      <div className="route-line route-two" />
-      {vehicles.map((vehicle) => (
-        <div
-          key={vehicle.id}
-          className={`map-marker ${vehicle.status === "BREAKDOWN" ? "incident-marker" : ""}`}
-          style={{ left: `${vehicle.x}%`, top: `${vehicle.y}%` }}
-          title={vehicle.id}
-        >
-          <span>{vehicle.status === "BREAKDOWN" ? "!" : "◆"}</span>
-          <label>{vehicle.id}</label>
-        </div>
-      ))}
-      <div className="map-legend">
-        <span>
-          <i className="legend-dot cyan" /> Active
-        </span>
-        <span>
-          <i className="legend-dot orange" /> Incident
-        </span>
-        <span>
-          <i className="legend-dot purple" /> Depot
-        </span>
-      </div>
+      <RouteMap vehicles={vehicles} />
+      {!hasCoordinates && <small className="map-data-notice">Vehicle coordinates are not available yet. Add live coordinates to show fleet markers.</small>}
     </div>
   );
 }

@@ -20,7 +20,11 @@ export default function CreateDeliveryRequest() {
   const [images, setImages] = useState([]);
   const [error, setError] = useState("");
   function change(event) {
-    setForm({ ...form, [event.target.name]: event.target.value });
+    const { name, value } = event.target;
+    const nextValue = ["length", "width", "height"].includes(name)
+      ? value.replace(/\D/g, "")
+      : value;
+    setForm({ ...form, [name]: nextValue });
   }
   function addImages(event) {
     const files = Array.from(event.target.files);
@@ -145,6 +149,8 @@ export default function CreateDeliveryRequest() {
               <input
                 name="length"
                 type="number"
+                min="1"
+                step="1"
                 value={form.length}
                 onChange={change}
                 placeholder="120"
@@ -155,6 +161,8 @@ export default function CreateDeliveryRequest() {
               <input
                 name="width"
                 type="number"
+                min="1"
+                step="1"
                 value={form.width}
                 onChange={change}
                 placeholder="80"
@@ -165,6 +173,8 @@ export default function CreateDeliveryRequest() {
               <input
                 name="height"
                 type="number"
+                min="1"
+                step="1"
                 value={form.height}
                 onChange={change}
                 placeholder="100"
@@ -179,7 +189,7 @@ export default function CreateDeliveryRequest() {
               onChange={addImages}
             />
             <span className="upload-icon">＋</span>
-            <b>Upload product images</b>
+            <b>{images.length ? `${images.length} image${images.length === 1 ? "" : "s"} selected` : "Upload product images"}</b>
             <small>
               At least one image required · PNG, JPG, or WEBP · Up to 6 images
             </small>

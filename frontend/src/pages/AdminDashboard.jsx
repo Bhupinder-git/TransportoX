@@ -130,34 +130,6 @@ export default function AdminDashboard() {
           </div>
         </section>
       </div>
-      <section className="panel ai-workflow">
-        <div>
-          <div className="eyebrow">AI AUTOMATION CENTER</div>
-          <h2>Recovery workflow status</h2>
-        </div>
-        <div className="workflow-steps">
-          <div className="complete">
-            <b>1</b>
-            <span>Failure raised</span>
-          </div>
-          <div className="complete">
-            <b>2</b>
-            <span>AI reassignment</span>
-          </div>
-          <div className="complete">
-            <b>3</b>
-            <span>Repair center routed</span>
-          </div>
-          <div>
-            <b>4</b>
-            <span>ETA recalculated</span>
-          </div>
-          <div>
-            <b>5</b>
-            <span>User notified</span>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
